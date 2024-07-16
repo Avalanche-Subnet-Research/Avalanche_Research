@@ -12,7 +12,7 @@ ACP-77 introduces significant changes to the Avalanche subnet ecosystem, includi
 **SetSubnetValidatorManagerTx:** Subnets will set the validator manager location, enabling the use of the new registration flow.
 **IncreaseBalanceTx**: This transaction will allow anyone to add additional $AVAX to a Subnet Validator's balance.
 
-#### New Transactions Introduced in ACP-77
+### New Transactions Introduced in ACP-77
 RegisterSubnetValidatorTx
 SetSubnetValidatorWeightTx
 ExitValidatorSetTx
@@ -21,7 +21,7 @@ IncreaseBalanceTx
 
 
 
-### Potential Security Concerns
+## Potential Security Concerns
 
 1. **Increased Number of Validators**
    - **Concern**: Lowering the cost and hardware requirements for becoming a Subnet Validator may lead to a significant increase in the number of validators. This can strain network resources, particularly the P-Chain.
@@ -83,7 +83,7 @@ IncreaseBalanceTx
 
 
 
-### Using Simulations to Identify and Mitigate Security Concerns in ACP-77
+## Using Simulations to Identify and Mitigate Security Concerns in ACP-77
 
 Simulations can be a powerful tool to identify potential security concerns, understand the impact of different scenarios, and develop mitigation strategies for the changes introduced by ACP-77. By creating realistic models and running simulations, we can stress test the network, evaluate edge cases, and predict the behavior of the system under various conditions.
 
@@ -108,7 +108,6 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Evaluate the system's ability to handle peak loads
    - Determine any degradation in service or failures
 
-**Tools**: cadCAD, radCAD, AvalancheGo (for integration testing).
 
 #### 2. Malicious Validator Simulation
 
@@ -128,7 +127,6 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Effectiveness of governance and security mechanisms
    - Areas needing improvement in detection and mitigation
 
-**Tools**: cadCAD, radCAD, custom scripts to simulate malicious behavior.
 
 #### 3. Fee Manipulation Testing
 
@@ -147,7 +145,6 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Identify potential vulnerabilities in the fee mechanism
    - Evaluate the fairness and robustness of fee calculations
 
-**Tools**: cadCAD, radCAD, financial modeling tools.
 
 #### 4. Bootstrapping Reliability
 
@@ -166,7 +163,6 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Effectiveness of security measures during bootstrapping
    - Recommendations for improving bootstrapping security
 
-**Tools**: cadCAD, radCAD, network simulation tools.
 
 #### 5. Governance Model Evaluation
 
@@ -186,7 +182,6 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Effectiveness and fairness of governance models
    - Recommendations for optimizing governance mechanisms
 
-**Tools**: cadCAD, radCAD, governance simulation tools.
 
 ### Implementation Steps
 
@@ -200,12 +195,3 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Use statistical and analytical tools to interpret simulation results and identify patterns, anomalies, and vulnerabilities.
 5. **Develop Mitigation Strategies**:
    - Based on simulation results, propose and test mitigation strategies to address identified security concerns.
-
-### Tools and Resources
-
-- **cadCAD**: A Python library for complex systems modeling and simulation, ideal for simulating blockchain networks.
-- **radCAD**: An extension of cadCAD focusing on agent-based modeling and simulations.
-- **AvalancheGo**: The official implementation of the Avalanche network, useful for integration and performance testing.
-- **Custom Scripts**: For simulating specific behaviors, such as malicious actions or targeted fee manipulation.
-
-By systematically using simulations to stress test and explore edge cases in the ACP-77 upgrade, we can proactively identify and address potential security concerns, ensuring a more robust and secure Avalanche subnet ecosystem.
