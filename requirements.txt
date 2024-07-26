@@ -1,0 +1,5 @@
+cadCAD
+matplotlib
+pandas
+numpy
+ipykernel

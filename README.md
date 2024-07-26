@@ -5,6 +5,7 @@
 ACP-77 introduces significant changes to the Avalanche subnet ecosystem, including the separation of Subnet Validators from Primary Network Validators, a continuous fee mechanism, and enhanced sovereignty for Subnets. These changes aim to reduce barriers to entry and increase flexibility, but they also introduce potential security concerns. Identifying and addressing these concerns is critical to ensuring the robustness and reliability of the network.
 
 ### New Registration Flow
+
 **Retrieve a BLS Multisig from the Subnet**: Subnets will define their own procedure for prospective validators to retrieve the necessary validator information.
 **Issue a RegisterSubnetValidatorTx on the P-Chain**: This transaction will add the Subnet Validator to the Subnet's validator set on the P-Chain.
 **SetSubnetValidatorWeightTx**: This transaction will modify the voting weight of a Subnet Validator and manage validator set updates.
@@ -13,11 +14,12 @@ ACP-77 introduces significant changes to the Avalanche subnet ecosystem, includi
 **IncreaseBalanceTx**: This transaction will allow anyone to add additional $AVAX to a Subnet Validator's balance.
 
 ### New Transactions Introduced in ACP-77
-RegisterSubnetValidatorTx
-SetSubnetValidatorWeightTx
-ExitValidatorSetTx
-SetSubnetValidatorManagerTx
-IncreaseBalanceTx
+
+#### RegisterSubnetValidatorTx
+#### SetSubnetValidatorWeightTx
+#### ExitValidatorSetTx
+#### SetSubnetValidatorManagerTx
+#### IncreaseBalanceTx
 
 
 
@@ -195,3 +197,14 @@ Simulations can be a powerful tool to identify potential security concerns, unde
    - Use statistical and analytical tools to interpret simulation results and identify patterns, anomalies, and vulnerabilities.
 5. **Develop Mitigation Strategies**:
    - Based on simulation results, propose and test mitigation strategies to address identified security concerns.
+
+# Continuous Fee Mechanism
+
+**Continuous Fee Mechanism:**
+The core of ACP-77’s proposal is the replacement of the high upfront stake requirement with a continuous fee mechanism. Instead of requiring a large initial deposit, validators will pay ongoing fees to maintain their subnet validator registration on the P-Chain. This change aims to make the network more accessible by spreading the cost over time rather than demanding a large sum upfront​ (blocmates. | Crypto News & Information)​.
+
+**Fee Calculation:**
+The dynamic fee mechanism will be based on a target utilization of total subnet validators registered to the P-Chain, rather than the economic activity on the subnet itself. This means that the fees will adjust according to the number of validators, aiming to balance the network's load and resources efficiently​ (HelloARC)​.
+
+**Impact on On-chain Costs:**
+The proposed dynamic fee mechanism is designed to lower the hardware and maintenance costs for subnet validators. By reducing the requirement for validators to also validate the primary network’s C and X chains, hardware costs can be significantly reduced—from approximately $250 per month to around $80 per month per validator​ (blocmates. | Crypto News & Information)​.
