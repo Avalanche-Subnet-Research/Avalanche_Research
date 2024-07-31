@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "technical_specs": ["high", "medium", "low"],
+        "geographical_distribution": ["North America", "Europe", "Asia", "South America", "Africa"],
+        "reputation": ["excellent", "good", "average", "poor"]
+    },
+    "min_stake": 1000,
+    "staking_token": "AVAX",
+    "reward_mechanisms": {
+        "block_rewards": 10
+    },
+    "performance_metrics": [0.95, 0.9, 0.85, 0.8, 0.75]
+}

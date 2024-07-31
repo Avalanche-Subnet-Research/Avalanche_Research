@@ -1,0 +1,8 @@
+
+{
+    "slashing_conditions": {
+        "double_signing": 50, "downtime": 10,
+        "malicious": 0.9,
+        "honest_failure": 0.1
+    }
+}

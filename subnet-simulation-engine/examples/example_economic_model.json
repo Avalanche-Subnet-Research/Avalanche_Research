@@ -1,0 +1,20 @@
+{
+    "total_supply": 100000000,
+    "initial_distribution": {
+        "validators": 20,
+        "community": 50,
+        "development": 30
+    },
+    "fee_rate": 0.01,
+    "transaction_volume": 100000,
+    "staking_rewards": {
+        "short_term": 0.05,
+        "medium_term": 0.1,
+        "long_term": 0.15
+    },
+    "lock_up_periods": {
+        "short_term": 30,
+        "medium_term": 180,
+        "long_term": 365
+    }
+}

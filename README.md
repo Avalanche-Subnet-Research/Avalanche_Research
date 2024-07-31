@@ -156,15 +156,19 @@ To create an effective simulation engine for subnet developers on the Avalanche 
 
 Use probabilistic models to simulate the selection of validators based on input criteria.
 Calculate participation rates and security scores using statistical methods.
-Economic Model Simulation:
 
+#### Economic Model Simulation:
 Implement economic models to simulate token distribution, transaction fees, and validator rewards.
 Use differential equations to project token supply and value over time.
-Security Simulation:
 
+#### Security Simulation:
 Develop algorithms to simulate validator behavior and slashing events.
 Use game theory to model validator incentives and potential misbehavior scenarios.
-Data Processing:
 
-Input Handling: Parse and validate user inputs to ensure they are within acceptable ranges and formats.
+#### Data Processing:
+**Input Handling:** Parse and validate user inputs to ensure they are within acceptable ranges and formats.
 Output Generation: Use the simulation results to generate detailed reports and visualizations.
+
+python simulation_engine/cli.py validator examples/example_validator_config.json
+python simulation_engine/cli.py economic examples/example_economic_model.json
+python simulation_engine/cli.py security examples/example_security_model.json
