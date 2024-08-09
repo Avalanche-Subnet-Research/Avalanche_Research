@@ -1,0 +1,25 @@
+{
+    "transaction_throughput_params": {
+        "base_throughput": 1000
+    },
+    "block_size_params": {
+        "base_block_size": 1,  
+        "block_interval": 10,  
+        "network_bandwidth": 100 
+    },
+    "consensus_params": {
+        "type": "PoS",
+        "efficiency": 0.9
+    },
+    "latency_params": {
+        "base_latency": 100,
+        "geographical_factor": 1.2
+    },
+    "topology_params": {
+        "type": "fully_connected"
+    },
+    "fault_tolerance_params": {
+        "base_fault_tolerance": 0.95,
+        "redundancy_factor": 1.1
+    }
+}
