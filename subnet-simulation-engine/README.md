@@ -4,7 +4,7 @@
 
 Post-ACP-77, subnet creators on the Avalanche network have a range of design choices to consider when launching and managing a subnet. Here are the key design choices:
 
-### Validator Set Configuration
+### Validator Set Configuration Model
 
 1. **Validator Selection:**
    - **Criteria for Validators:** Decide on the criteria for validators, such as technical specifications, stake requirements, and geographical distribution.
@@ -18,25 +18,7 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
    - **Reward Distribution:** Design the reward distribution mechanism for validators, including how rewards are calculated and distributed.
    - **Incentives:** Develop incentives to encourage honest behavior and long-term participation from validators.
 
-### Economic and Fee Structures
-
-4. **Continuous Fee Mechanism:**
-   - **Fee Rates:** Determine the dynamic base fee rate that validators will pay to the P-Chain based on network activity.
-   - **Balance Management:** Implement strategies for validators to manage their balance and ensure they do not run out of funds to cover continuous fees.
-
-5. **Economic Models:**
-   - **Tokenomics:** Develop the overall economic model for the subnet, including token issuance, distribution, and utility within the subnet.
-   - **Sustainability:** Ensure the economic model is sustainable and attractive to both validators and users.
-
-
-6. **Security Measures:**
-   - **Validator Integrity:** Implement measures to ensure validator integrity, including slashing mechanisms for misbehavior.
-   - **Security Protocols:** Define the security protocols and practices to protect the subnet from attacks.
-
-
-## 1. Validator Set Configuration Simulator
-
-**Validator Selection:**
+   **Validator Selection:**
 - **Criteria Input:** Allow users to define technical specifications, geographic distribution, and reputation criteria for validators.
 - **Simulation Output:** Generate potential validator sets based on input criteria, displaying diversity, technical capability, and reputation scores.
 
@@ -48,8 +30,16 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
 - **Configuration Options:** Allow users to set block rewards, transaction fees, and performance-based incentives.
 - **Simulation Output:** Calculate and display projected validator rewards based on the configuration.
 
-#### 2. Economic Model Simulator
 
+### Economic Model
+
+4. **Continuous Fee Mechanism:**
+   - **Fee Rates:** Determine the dynamic base fee rate that validators will pay to the P-Chain based on network activity.
+   - **Balance Management:** Implement strategies for validators to manage their balance and ensure they do not run out of funds to cover continuous fees.
+
+5. **Economic Models:**
+   - **Tokenomics:** Develop the overall economic model for the subnet, including token issuance, distribution, and utility within the subnet.
+   - **Sustainability:** Ensure the economic model is sustainable and attractive to both validators and users.
 **Continuous Fee Mechanism:**
 - **Fee Rate Inputs:** Allow users to set dynamic base fee rates and balance management strategies.
 - **Simulation Output:** Show the impact of different fee rates on validator profitability and network sustainability.
@@ -61,11 +51,41 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
 **Sustainability Analysis:**
 - **Incentive Structures:** Simulate the long-term impact of various incentive structures on network participation and economic health.
 
-#### 3. Security
 
-**Validator Integrity:**
-- **Slashing Conditions:** Allow users to set slashing conditions for different types of validator misbehavior.
-- **Simulation Output:** Show the effect of slashing on network security and validator behavior.
+### Security Measures:**
+   - **Validator Integrity:** Implement measures to ensure validator integrity, including slashing mechanisms for misbehavior.
+   - **Security Protocols:** Define the security protocols and practices to protect the subnet from attacks.
+  - **Slashing Conditions:** Allow users to set slashing conditions for different types of validator misbehavior.
+    - **Simulation Output:** Show the effect of slashing on network security and validator behavior.
+
+
+
+### Network Architecture Model
+
+1. **Transaction Throughput:**
+   - **Definition**: The number of transactions a subnet can process per second (TPS).
+   - **Simulation**: This will involve modeling the impact of the consensus algorithm, network latency, and transaction finality on TPS. We will simulate various network conditions and consensus mechanisms to observe how they affect throughput.
+
+2. **Block Size:**
+   - **Definition**: The maximum size of a block in bytes or megabytes.
+   - **Simulation**: We'll simulate different block sizes and transaction sizes to assess their impact on block propagation, network bandwidth usage, and transaction confirmation times. This will include varying the block interval to observe its effects.
+
+3. **Consensus Mechanism:**
+   - **Definition**: The protocol used to achieve agreement on the blockchain state among distributed nodes.
+   - **Simulation**: We will simulate different consensus mechanisms (e.g., Proof of Stake, Proof of Work, Avalanche Consensus) to analyze trade-offs between security, decentralization, and performance.
+
+4. **Latency and Propagation Delay:**
+   - **Definition**: The time it takes for a transaction or block to reach all nodes in the network.
+   - **Simulation**: The model will simulate how different network topologies, bandwidth capacities, and geographical distributions of nodes affect latency and overall network efficiency.
+
+5. **Network Topology:**
+   - **Definition**: The structure of the network, including how nodes are connected and communicate with each other.
+   - **Simulation**: We'll assess the impact of different topologies (fully connected, partially connected, hierarchical) on network resilience, efficiency, and fault tolerance.
+
+6. **Fault Tolerance and Redundancy:**
+   - **Definition**: The network's ability to continue functioning correctly even in the presence of faults or failures.
+   - **Simulation**: We'll model the network's fault tolerance under various failure scenarios, including the number of nodes that can fail without disrupting the network and the network's ability to reach consensus despite a percentage of failed or malicious nodes.
+
 
 ### Example Use Case
 
