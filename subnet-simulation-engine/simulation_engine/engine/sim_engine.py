@@ -29,13 +29,7 @@ class SimulationEngine:
         plt.legend()
         plt.show()
 
-        plt.figure(figsize=(10, 6))
-        plt.plot(metrics['validator_uptime'], label='Validator Uptime')
-        plt.title('Validator Uptime Over Time')
-        plt.xlabel('Time (days)')
-        plt.ylabel('Uptime (%)')
-        plt.legend()
-        plt.show()
+     
 
         plt.figure(figsize=(10, 6))
         plt.plot(metrics['validator_rewards'], label='Validator Rewards')
@@ -53,13 +47,7 @@ class SimulationEngine:
         plt.legend()
         plt.show()
 
-        plt.figure(figsize=(10, 6))
-        plt.plot(metrics['inflation_rate'], label='Inflation Rate')
-        plt.title('Inflation Rate Over Time')
-        plt.xlabel('Time (days)')
-        plt.ylabel('Inflation Rate (%)')
-        plt.legend()
-        plt.show()
+    
 
         plt.figure(figsize=(10, 6))
         plt.plot(metrics['token_stability'], label='Token Stability')

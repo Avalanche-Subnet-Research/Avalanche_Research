@@ -35,13 +35,13 @@ class EvaluateMetrics:
             # Step 5: Collect Metrics
             metrics_over_time['tps'].append(network_architecture['transaction_throughput'])
             metrics_over_time['finality_time'].append(network_architecture['block_size_info']['propagation_delay'])
-            metrics_over_time['validator_uptime'].append(sum(validator['uptime'] for validator in validators['selected_validators']) / len(validators['selected_validators']))
+            #metrics_over_time['validator_uptime'].append(sum(validator['uptime'] for validator in validators['selected_validators']) / len(validators['selected_validators']))
             metrics_over_time['validator_rewards'].append(sum(validator['rewards'] for validator in validators['rewarded_validators']))
             metrics_over_time['slashing_events'].append(len(security['slashed_validators']))
-            metrics_over_time['inflation_rate'].append(economic_metrics['inflation_rate'])
-            metrics_over_time['token_stability'].append(economic_metrics['token_stability'])
+            #åmetrics_over_time['inflation_rate'].append(economic_metrics['inflation_rate'])
+            #ßmetrics_over_time['token_stability'].append(economic_metrics['token_stability'])
             metrics_over_time['network_latency'].append(network_architecture['latency'])
             metrics_over_time['fault_tolerance'].append(network_architecture['fault_tolerance'])
-            metrics_over_time['resource_utilization'].append(economic_metrics['resource_utilization'])
+            #metrics_over_time['resource_utilization'].append(economic_metrics['resource_utilization'])
 
         return metrics_over_time
