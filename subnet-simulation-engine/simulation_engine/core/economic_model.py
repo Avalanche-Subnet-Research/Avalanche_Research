@@ -1,3 +1,4 @@
+import random
 import numpy as np
 
 class EconomicModel:
@@ -54,24 +55,52 @@ class EconomicModel:
         }
         return scenarios
 
-    def simulate_economics(self):
-        distribution = self.simulate_token_distribution()
-        fees_collected, token_burned = self.simulate_transaction_fees()
-        rewards, total_rewards = self.simulate_staking_rewards()
-        inflation_tokens, deflation_tokens = self.simulate_dynamic_token_supply(0.02, 0.01)
-        primary_to_secondary, secondary_token_supply = self.simulate_multi_token_interactions(500000, 0.1)
-        scenarios = self.simulate_economic_scenarios()
+    def run_simulation(self, inflation_rate, deflation_rate, conversion_rate, secondary_token_supply, periods=12):
+        results = []
+        for period in range(periods):
+            # Simulate each period
+            self.transaction_volume *= random.uniform(0.95, 1.05)  # Introducing variability in transaction volume
+            fees_collected, token_burned = self.simulate_transaction_fees()
+            rewards, total_rewards = self.simulate_staking_rewards()
+            inflation_tokens, deflation_tokens = self.simulate_dynamic_token_supply(inflation_rate, deflation_rate)
+            primary_to_secondary, secondary_token_supply = self.simulate_multi_token_interactions(secondary_token_supply, conversion_rate)
+            scenarios = self.simulate_economic_scenarios()
 
-        return {
-            'distribution': distribution,
-            'fees_collected': fees_collected,
-            'token_burned': token_burned,
-            'staking_rewards': rewards,
-            'total_rewards': total_rewards,
-            'inflation_tokens': inflation_tokens,
-            'deflation_tokens': deflation_tokens,
-            'primary_to_secondary': primary_to_secondary,
-            'secondary_token_supply': secondary_token_supply,
-            'economic_scenarios': scenarios,
-            'current_supply': self.current_supply
-        }
+            # Store results
+            results.append({
+                'period': period + 1,
+                'transaction_volume': self.transaction_volume,
+                'current_supply': self.current_supply,
+                'fees_collected': fees_collected,
+                'token_burned': token_burned,
+                'staking_rewards': rewards,
+                'total_rewards': total_rewards,
+                'inflation_tokens': inflation_tokens,
+                'deflation_tokens': deflation_tokens,
+                'primary_to_secondary': primary_to_secondary,
+                'secondary_token_supply': secondary_token_supply,
+                'economic_scenarios': scenarios
+            })
+
+        return results
+
+# Example of running the enhanced economic model
+economic_model = EconomicModel(
+    total_supply=100000000,
+    initial_distribution={'validators': 20, 'community': 50, 'development': 30},
+    fee_rate=0.01,
+    transaction_volume=1000000,
+    staking_rewards={'short_term': 0.05, 'medium_term': 0.10, 'long_term': 0.20},
+    lock_up_periods={'short_term': 10, 'medium_term': 20, 'long_term': 30}
+)
+
+simulation_results = economic_model.run_simulation(
+    inflation_rate=0.02,
+    deflation_rate=0.01,
+    conversion_rate=0.1,
+    secondary_token_supply=500000,
+    periods=12  # Simulating for 12 periods (e.g., months or years)
+)
+
+# Example: Printing simulation results for the first period
+print(simulation_results[0])
