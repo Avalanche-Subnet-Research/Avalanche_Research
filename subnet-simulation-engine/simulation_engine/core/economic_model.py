@@ -11,6 +11,7 @@ class EconomicModel:
         self.lock_up_periods = lock_up_periods
         self.current_supply = total_supply
         self.token_burned = 0
+        self.burn_rate=0.5
 
     def simulate_token_distribution(self):
         distribution = {
@@ -22,7 +23,7 @@ class EconomicModel:
 
     def simulate_transaction_fees(self):
         fees_collected = self.transaction_volume * self.fee_rate
-        self.token_burned += fees_collected * 0.5  # Assume 50% of fees are burned
+        self.token_burned += fees_collected * self.burn_rate  # Assume 50% of fees are burned
         self.current_supply -= self.token_burned
         return fees_collected, self.token_burned
 
