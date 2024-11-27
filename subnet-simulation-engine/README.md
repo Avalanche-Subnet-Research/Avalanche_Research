@@ -1,8 +1,8 @@
-# Quantative Subnet Launch Framework
+# Quantative L1 Launch Framework
 
-### Design Choices for Subnet Creators Post-ACP-77
+### Design Choices for L1 Creators Post-ACP-77
 
-Post-ACP-77, subnet creators on the Avalanche network have a range of design choices to consider when launching and managing a subnet. Here are the key design choices:
+Post-ACP-77, L1 creators on the Avalanche network have a range of design choices to consider when launching and managing an L1. Here are the key design choices:
 
 ### Validator Set Configuration Model
 
@@ -11,8 +11,8 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
    - **Number of Validators:** Determine the optimal number of validators needed to balance security and decentralization with operational efficiency.
 
 2. **Staking Requirements:**
-   - **Minimum Stake:** Set the minimum amount of tokens that validators need to stake to participate in the subnet.
-   - **Staking Token:** Choose the native token for staking and decide if it will be the subnet's own token or AVAX.
+   - **Minimum Stake:** Set the minimum amount of tokens that validators need to stake to participate in the L1.
+   - **Staking Token:** Choose the native token for staking and decide if it will be the L1's own token or AVAX.
 
 3. **Reward Mechanisms:**
    - **Reward Distribution:** Design the reward distribution mechanism for validators, including how rewards are calculated and distributed.
@@ -38,7 +38,7 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
    - **Balance Management:** Implement strategies for validators to manage their balance and ensure they do not run out of funds to cover continuous fees.
 
 5. **Economic Models:**
-   - **Tokenomics:** Develop the overall economic model for the subnet, including token issuance, distribution, and utility within the subnet.
+   - **Tokenomics:** Develop the overall economic model for the L1, including token issuance, distribution, and utility within the L1.
    - **Sustainability:** Ensure the economic model is sustainable and attractive to both validators and users.
 **Continuous Fee Mechanism:**
 - **Fee Rate Inputs:** Allow users to set dynamic base fee rates and balance management strategies.
@@ -54,7 +54,7 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
 
 ### Security Measures:**
    - **Validator Integrity:** Implement measures to ensure validator integrity, including slashing mechanisms for misbehavior.
-   - **Security Protocols:** Define the security protocols and practices to protect the subnet from attacks.
+   - **Security Protocols:** Define the security protocols and practices to protect the L1 from attacks.
   - **Slashing Conditions:** Allow users to set slashing conditions for different types of validator misbehavior.
     - **Simulation Output:** Show the effect of slashing on network security and validator behavior.
 
@@ -63,7 +63,7 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
 ### Network Architecture Model
 
 1. **Transaction Throughput:**
-   - **Definition**: The number of transactions a subnet can process per second (TPS).
+   - **Definition**: The number of transactions a L1 can process per second (TPS).
    - **Simulation**: This will involve modeling the impact of the consensus algorithm, network latency, and transaction finality on TPS. We will simulate various network conditions and consensus mechanisms to observe how they affect throughput.
 
 2. **Block Size:**
@@ -89,18 +89,18 @@ Post-ACP-77, subnet creators on the Avalanche network have a range of design cho
 
 ### Example Use Case
 
-A subnet developer wants to create a DeFi platform on Avalanche. They use the tool to:
+A L1 developer wants to create a DeFi platform on Avalanche. They use the tool to:
 - Define technical specifications and staking requirements for validators.
 - Set reward mechanisms and continuous fee rates.
 - Simulate the economic model to ensure sustainability.
 - Configure slashing conditions and governance rules.
 - View simulation results to make informed design choices.
 
-By using this tool, subnet developers can make data-driven decisions, optimize their subnet configurations, and enhance the security, performance, and economic viability of their networks.
+By using this tool, L1 developers can make data-driven decisions, optimize their L1 configurations, and enhance the security, performance, and economic viability of their networks.
 
-## Quantitative Subnet Launch Framework: Simulation Engine
+## Quantitative L1 Launch Framework: Simulation Engine
 
-To create an effective simulation engine for subnet developers on the Avalanche network, we will focus on three main modules: Validator Set Configuration Simulator, Economic Model Simulator, and Security Simulator. Each module will provide inputs and generate outputs to help developers make informed decisions.
+To create an effective simulation engine for L1 developers on the Avalanche network, we will focus on three main modules: Validator Set Configuration Simulator, Economic Model Simulator, and Security Simulator. Each module will provide inputs and generate outputs to help developers make informed decisions.
 
 #### 1. Validator Set Configuration Simulator
 
@@ -146,7 +146,7 @@ To create an effective simulation engine for subnet developers on the Avalanche 
 - **Supply and Distribution:**
   - **Total Token Supply:** Initial and maximum supply.
   - **Initial Distribution:** Allocation to validators, developers, community, etc.
-  - **Utility:** Use cases for the token within the subnet.
+  - **Utility:** Use cases for the token within the L1.
 - **Simulation Output:**
   - **Economic Activity:** Projected transaction volume and value.
   - **Token Value:** Estimated token price over time based on supply and demand.
@@ -197,7 +197,7 @@ python simulation_engine/cli.py security examples/example_security_model.json
 # Experiments
 
 ### 1. **Transaction Volume Stress Test**
-   - **Objective:** Evaluate the subnet's performance under varying levels of transaction volume.
+   - **Objective:** Evaluate the L1's performance under varying levels of transaction volume.
    - **Description:** Simulate scenarios with low, medium, and high transaction volumes. Assess how the network's latency, throughput, and overall performance are impacted. This helps in determining the optimal transaction throughput capacity and block size.
    - **Metrics to Monitor:** 
      - Transaction throughput
@@ -226,8 +226,8 @@ python simulation_engine/cli.py security examples/example_security_model.json
      - Stake distribution
 
 ### 4. **Economic Sustainability Analysis**
-   - **Objective:** Evaluate the long-term sustainability of the subnet’s economic model.
-   - **Description:** Simulate the subnet’s economy over an extended period, considering transaction fees, staking rewards, token burning, and market dynamics. This experiment helps identify potential economic risks and opportunities for adjustments.
+   - **Objective:** Evaluate the long-term sustainability of the L1’s economic model.
+   - **Description:** Simulate the L1’s economy over an extended period, considering transaction fees, staking rewards, token burning, and market dynamics. This experiment helps identify potential economic risks and opportunities for adjustments.
    - **Metrics to Monitor:**
      - Token supply dynamics (inflation, deflation)
      - Fees collected vs. staking rewards
@@ -235,7 +235,7 @@ python simulation_engine/cli.py security examples/example_security_model.json
      - Token distribution among validators, community, and development
 
 ### 5. **Consensus Mechanism Comparison**
-   - **Objective:** Compare different consensus mechanisms to determine the best fit for the subnet.
+   - **Objective:** Compare different consensus mechanisms to determine the best fit for the L1.
    - **Description:** Simulate different consensus mechanisms (e.g., PoS, PoW, Avalanche) and evaluate their impact on security, decentralization, and network performance under various conditions.
    - **Metrics to Monitor:**
      - Security level
@@ -264,7 +264,7 @@ python simulation_engine/cli.py security examples/example_security_model.json
 
 ### 8. **Staking Rewards and Lock-up Period Analysis**
    - **Objective:** Determine the optimal staking rewards and lock-up periods for incentivizing long-term validator participation.
-   - **Description:** Simulate various combinations of staking rewards and lock-up periods to see their effects on validator behavior, token supply, and network security.
+   - **Description:** Simulate various staking rewards and lock-up periods combinations to see their effects on validator behavior, token supply, and network security.
    - **Metrics to Monitor:**
      - Staking participation rates
      - Total rewards distributed
@@ -281,19 +281,19 @@ python simulation_engine/cli.py security examples/example_security_model.json
      - Market stability
 
 ### 10. **Security and Attack Resilience Test**
-   - **Objective:** Assess the subnet's resilience to potential security threats and attacks.
-   - **Description:** Simulate potential security threats (e.g., validator collusion, DDoS attacks) and analyze how the subnet's security mechanisms respond. This helps in refining security parameters.
+   - **Objective:** Assess the L1's resilience to potential security threats and attacks.
+   - **Description:** Simulate potential security threats (e.g., validator collusion, DDoS attacks) and analyze how the L1's security mechanisms respond. This helps in refining security parameters.
    - **Metrics to Monitor:**
      - Security breaches or failures
      - Response times to attacks
      - Impact on network performance
      - Validator behavior during attacks
 
-### How These Experiments Help Subnet Creators:
+### How These Experiments Help L1 Creators:
 
-- **Risk Identification**: Subnet creators can identify potential risks associated with different design choices and preemptively address them.
+- **Risk Identification**: L1 creators can identify potential risks associated with different design choices and preemptively address them.
 - **Optimization**: The experiments enable creators to optimize various parameters, such as fee rates, staking rewards, and consensus mechanisms, for their specific use cases.
-- **Economic Sustainability**: By simulating long-term economic scenarios, creators can ensure that their subnet's economic model is sustainable and resilient to market fluctuations.
-- **Security and Stability**: Experiments focused on security and network architecture help ensure that the subnet is robust against attacks and can maintain stable performance under various conditions.
+- **Economic Sustainability**: By simulating long-term economic scenarios, creators can ensure that their L1's economic model is sustainable and resilient to market fluctuations.
+- **Security and Stability**: Experiments focused on security and network architecture help ensure that the L1 is robust against attacks and can maintain stable performance under various conditions.
 
-These experiments provide a comprehensive framework for evaluating and optimizing the key design choices of a subnet, helping creators make informed decisions tailored to their specific needs and goals.
+These experiments provide a comprehensive framework for evaluating and optimizing the key design choices of a L1, helping creators make informed decisions tailored to their specific needs and goals.
